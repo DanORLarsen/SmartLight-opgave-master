@@ -3,14 +3,14 @@ package hu.hungarian;
 
 import javafx.scene.paint.Color;
 
-public class SmartLight {
+public class SmartLightBulb {
     private short lightPercent;
     private Color color;
 
 
-    public SmartLight() {
-        color = Color.WHITESMOKE;
-        lightPercent = 0;
+    public SmartLightBulb() {
+        this.color = Color.WHITESMOKE;
+        this.lightPercent = 0;
     }
 
 
@@ -28,11 +28,11 @@ public class SmartLight {
     }
     public String toString()
     {
-     return "The color of the SmartLight is " + getColor() + " and the light percent is at " + getLightPercent();
+     return "The color of the SmartLightBulb is " + this.getColor() + " and the light percent is at " + this.getLightPercent();
     }
 
     public short getLightPercent() {
-        return lightPercent;
+        return this.lightPercent;
     }
 
     public void setLightPercent(short lightPercent) {
@@ -44,12 +44,12 @@ public class SmartLight {
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
     }
 
     public void setColor(Color color) {
         if (color == Color.BLACK)
-            color = Color.WHITESMOKE;
+        {color = Color.WHITESMOKE;}
         this.color = color;
     }
 }
